@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Live Server Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Advanced Live Server</h1>
+            <p class="subtitle">Memory Pool + Assembly Optimizations</p>
+        </header>
+
+        <main>
+            <section class="info-grid">
+                <div class="card">
+                    <h3>📊 Server Stats</h3>
+                    <div id="server-stats">
+                        <p>Memory Usage: <span id="memory-usage">Loading...</span></p>
+                        <p>Active Blocks: <span id="active-blocks">Loading...</span></p>
+                        <p>Pool Capacity: <span id="pool-capacity">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Performance</h3>
+                    <div id="performance-stats">
+                        <p>Requests: <span id="request-count">0</span></p>
+                        <p>Errors: <span id="error-count">0</span></p>
+                        <p>Last Check: <span id="last-check">0ms</span></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🔄 Live Reload</h3>
+                    <div class="status-indicator">
+                        <div id="reload-status" class="status-dot active"></div>
+                        <span>Active</span>
+                    </div>
+                    <p>แก้ไขไฟล์นี้แล้วดูผลลัพธ์!</p>
+                </div>
+            </section>
+
+            <section class="test-area">
+                <h2>🧪 Test Zone</h2>
+                <div class="test-buttons">
+                    <button onclick="testMemoryStats()">📈 Check Memory</button>
+                    <button onclick="testReload()">🔄 Test Reload</button>
+                    <button onclick="stressTest()">💪 Stress Test</button>
+                    <button onclick="clearStats()">🧹 Clear Stats</button>
+                </div>
+                
+                <div id="test-results" class="test-results">
+                    <h4>Test Results:</h4>
+                    <div id="results-content">Ready for testing...</div>
+                </div>
+            </section>
+
+            <section class="code-demo">
+                <h2>💻 Live Code Demo</h2>
+                <p>แก้ไข CSS หรือ JavaScript แล้วดูการเปลี่ยนแปลง:</p>
+                <div class="demo-box" id="demo-box">
+                    <p>This box will change when you modify the CSS!</p>
+                    <div class="animated-element"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🛠️ Built with C + Assembly + Memory Pool</p>
+            <p>แก้ไขไฟล์ index.html, style.css หรือ script.js เพื่อทดสอบ live reload</p>
+        </footer>
+    </div>
+
+    <script src="ExecuteServer.js"></script>
+    <script src="../live-reload.js"></script>
+</body>
+</html>
