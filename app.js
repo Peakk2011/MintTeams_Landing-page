@@ -1,33 +1,31 @@
-import { createState } from './lib/MintUtils.js';
-import { injectCSS, injectHTML, injectTitle } from './lib/InjectElement.js';
-import MarkupContent from "./lib/Content.js";
+import { Mint } from './lib/mint.js';
 
 const SetHTMLtitle = `
-    <title>${MarkupContent.PageTitle}</title>
+    <title>${Mint.MarkupContent.PageTitle}</title>
 `
 
 const MainStylesheet = `
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-        background-color: #faf8f0;
+        background-color: ${Mint.MarkupContent.CSScolor.ColorPrimary};
     }
-    ${MarkupContent.CSSnavbar()}
+    ${Mint.MarkupContent.CSSnavbar()}
 `;
 
-const Main = createState();
+const Main = Mint.createState();
 
 Main.subscribe(state => {
     const html = `
         <div>
-            ${MarkupContent.Navbar()}
+            ${Mint.MarkupContent.Navbar()}
         </div>
     `;
-    injectHTML('#app', html);
+    Mint.injectHTML('#app', html);
 });
 
 const AcceptCurrentProgressive = () => {
-    injectCSS(MainStylesheet);
-    injectTitle(SetHTMLtitle);
+    Mint.injectCSS(MainStylesheet);
+    Mint.injectTitle(SetHTMLtitle);
     // injectCSS(MarkupContent.CSSnavbar());
     // Or use this instend of ${MarkupContent.CSSnavbar()} in MainStylesheet on line 9
     Main.set(s => s);

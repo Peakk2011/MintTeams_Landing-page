@@ -402,3 +402,8 @@ int main() {
     WSACleanup();
     return 0;
 }
+
+/*  Compile using 
+    gcc -O2 Execute.c -o Execute.exe -lws2_32
+    Than open localhost:3000
+*/  
