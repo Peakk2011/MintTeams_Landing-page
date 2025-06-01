@@ -23,11 +23,11 @@ Main.subscribe(state => {
     Mint.injectHTML('#app', html);
 });
 
+console.log(Mint.MarkupContent.StaticCSSvalues.CenterPositions.CALLPosition);
+
 const AcceptCurrentProgressive = () => {
-    Mint.injectCSS(MainStylesheet);
+    Mint.injectCSS(Mint.WebElements.StoredFontFamily + MainStylesheet);
     Mint.injectTitle(SetHTMLtitle);
-    // injectCSS(MarkupContent.CSSnavbar());
-    // Or use this instend of ${MarkupContent.CSSnavbar()} in MainStylesheet on line 9
     Main.set(s => s);
 }
 
@@ -43,27 +43,3 @@ const AdjustHook = () => {
 
 AdjustHook();
 AcceptCurrentProgressive();
-
-/*  LOGIG C Pseudo Code
-
-    import = #include </lib/MintUtils.js>
-            :#include </lib/InjectElement.js> 
-            :#include </lib/Content.js>
-    const SetHTMLtitle    = #define SetHTMLtitle
-    const MainStylesheet  = #define MainStylesheet
-    
-    ; Define language that varaibale using
-    MOV SetHTMLtitle, injectHTML      
-    MOV MainStylesheet, injectCSS      
-
-    const Main = createState();   ; Define program entry points
-    Look like  int "entry point"  ; Example with C programming
-
-    Main.subscribe(state => {});  ; Fully entry point called
-    
-    MOV Main, Main.subscribe(state => {});
-    CALL AcceptCurrentProgressive 
-    ; return 0 to know that end session of program
-    ; That will be called essentials progressive that you make
-    
-*/
